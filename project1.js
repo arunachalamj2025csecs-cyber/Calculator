@@ -1,10 +1,16 @@
+const b1 = document.querySelectorAll(".btn");
+var input = document.getElementById("display")
+const b2 = document.querySelector(".allclr")
 
-const b1 = document.querySelector(".btn")
+b1.forEach((btn)=>{
+  btn.addEventListener("click" , () => {
+    input.value  += btn.value
+  })
+})
+
+b2.addEventListener("click" , ()=>{
+  input.value = ""
+})
 
 
 
-b1.forEach((btn) => {
-  btn.addEventListener("click", function () {
-    console.log(this.value || this.textContent);
-  });
-});
